@@ -22,6 +22,7 @@ class Feed extends FeedAbstract
     {
         $doc = $this->getDocument();
         $nodeRss = $doc->createElement("rss");
+        $nodeRss->setAttribute("version", "2.0");
         $doc->appendChild($nodeRss);
         $doc->createAttributeNS('http://base.google.com/ns/1.0', 'g:attr');
         $nodeChannel = $doc->createElement('channel');

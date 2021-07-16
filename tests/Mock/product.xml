@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<item xmlns:g="http://base.google.com/ns/1.0">
+  <g:sale_price_effective_date>2021-12-28T13:00:00-0800/2021-12-31T13:00:00-0800</g:sale_price_effective_date>
+  <g:custom_label_0>summer</g:custom_label_0>
+  <g:custom_label_1>sale</g:custom_label_1>
+  <g:custom_label_2>test</g:custom_label_2>
+  <g:id>id-1234567890</g:id>
+  <g:title>Product title</g:title>
+  <g:description>Product description...</g:description>
+  <link>https://url.exmaple.com/products/id-1234567890/</link>
+  <g:image_link>https://url.exmaple.com/storage/images/products/id-1234567890/main.jpg</g:image_link>
+  <g:mobile_link>https://mobile.url.exmaple.com/products/id-1234567890/</g:mobile_link>
+  <g:additional_image_link>https://url.exmaple.com/storage/images/products/id-1234567890/1.jpg</g:additional_image_link>
+  <g:additional_image_link>https://url.exmaple.com/storage/images/products/id-1234567890/2.jpg</g:additional_image_link>
+  <g:additional_image_link>https://url.exmaple.com/storage/images/products/id-1234567890/3.jpg</g:additional_image_link>
+  <g:availability>in_stock</g:availability>
+  <g:availability_date>2021-12-25T13:00:00-08:00</g:availability_date>
+  <g:cost_of_goods_sold>9 PLN</g:cost_of_goods_sold>
+  <g:expiration_date>2021-12-31T13:00:00-08:00</g:expiration_date>
+  <g:price>11 PLN</g:price>
+  <g:sale_price>9.95 PLN</g:sale_price>
+  <g:unit_pricing_measure>750 ml</g:unit_pricing_measure>
+  <g:unit_pricing_base_measure>100 ml</g:unit_pricing_base_measure>
+  <g:product_category>2271</g:product_category>
+  <g:google_product_category>2271</g:google_product_category>
+  <g:google_product_category>1123</g:google_product_category>
+  <g:canonical_link>https://url.exmaple.com/products/id-1234567890/</g:canonical_link>
+  <g:brand>Brand XYZ</g:brand>
+  <g:gtin>9876543210</g:gtin>
+  <g:mpn>M1234599PN</g:mpn>
+  <g:identifier_exists>true</g:identifier_exists>
+  <g:condition>new</g:condition>
+  <g:adult>true</g:adult>
+  <g:multipack>6</g:multipack>
+  <g:is_bundle>false</g:is_bundle>
+  <g:age_group>true</g:age_group>
+  <g:color>black</g:color>
+  <g:size_type>petite</g:size_type>
+  <g:size_type>maternity</g:size_type>
+  <g:item_group_id>gid-12345</g:item_group_id>
+  <g:excluded_destination>Buy on listings</g:excluded_destination>
+  <g:excluded_destination>Local inventory ads</g:excluded_destination>
+  <g:included_destination>Shopping ads</g:included_destination>
+  <g:included_destination>Free local listings</g:included_destination>
+  <g:shipping xmlns:g="http://base.google.com/ns/1.0">
+    <g:service>DPD_PICKUP</g:service>
+    <g:price>12.22 </g:price>
+  </g:shipping>
+  <g:shipping_weight>3.5 kg</g:shipping_weight>
+  <g:min_handling_time>3</g:min_handling_time>
+  <g:max_handling_time>14</g:max_handling_time>
+  <g:tax xmlns:g="http://base.google.com/ns/1.0">
+    <g:country>PL</g:country>
+    <g:region>Lubuskie</g:region>
+    <g:rate>5.0</g:rate>
+    <g:tax_ship>yes</g:tax_ship>
+  </g:tax>
+  <g:tax_category>Clothes</g:tax_category>
+  <g:product_detail xmlns:g="http://base.google.com/ns/1.0">
+    <g:attribute_name>param_0</g:attribute_name>
+    <g:attribute_value>Value 0</g:attribute_value>
+  </g:product_detail>
+  <g:product_detail xmlns:g="http://base.google.com/ns/1.0">
+    <g:attribute_name>param_1</g:attribute_name>
+    <g:attribute_value>Value 1</g:attribute_value>
+  </g:product_detail>
+  <g:product_detail xmlns:g="http://base.google.com/ns/1.0">
+    <g:attribute_name>param_2</g:attribute_name>
+    <g:attribute_value>Value 2</g:attribute_value>
+  </g:product_detail>
+  <g:product_detail xmlns:g="http://base.google.com/ns/1.0">
+    <g:attribute_name>param_3</g:attribute_name>
+    <g:attribute_value>Value 3</g:attribute_value>
+  </g:product_detail>
+  <g:shopping_ads_excluded_country>CH</g:shopping_ads_excluded_country>
+  <g:shopping_ads_excluded_country>AT</g:shopping_ads_excluded_country>
+  <g:ships_from_country>PL</g:ships_from_country>
+  <g:product_highlight>Product highlight #1</g:product_highlight>
+  <g:product_highlight>Product highlight #2</g:product_highlight>
+  <g:product_highlight>Product highlight #3</g:product_highlight>
+</item>

@@ -3,6 +3,7 @@ namespace Sylapi\Feeds\Google\Models;
 
 use JMS\Serializer\Annotation as Serializer;
 use Sylapi\Feeds\Contracts\ProductSerializer;
+use Sylapi\Feeds\Google\Feed;
 
 /**
  * @Serializer\XmlRoot("item")
@@ -288,6 +289,12 @@ class Product implements ProductSerializer
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
      */
     private $shippingWeight;
+
+    /**
+     * @Serializer\Type("string")
+     * @Serializer\Exclude
+     */
+    private $shippingWeightUnit;
 
     /**
      * @Serializer\Type("string")
@@ -688,7 +695,7 @@ class Product implements ProductSerializer
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("sale_price_effective_date")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
-     * @return string
+     * @return null|string
      */
     public function getSalePriceEffectiveDate()
     {
@@ -1190,7 +1197,7 @@ class Product implements ProductSerializer
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_0")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
-     * @return string
+     * @return null|string
      */
     public function getCustomLabel0()
     {
@@ -1205,7 +1212,7 @@ class Product implements ProductSerializer
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_1")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
-     * @return string
+     * @return null|string
      */
     public function getCustomLabel1()
     {
@@ -1220,7 +1227,7 @@ class Product implements ProductSerializer
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_2")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
-     * @return string
+     * @return null|string
      */
     public function getCustomLabel2()
     {
@@ -1235,7 +1242,7 @@ class Product implements ProductSerializer
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_3")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
-     * @return string
+     * @return null|string
      */
     public function getCustomLabel3()
     {
@@ -1250,7 +1257,7 @@ class Product implements ProductSerializer
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_4")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
-     * @return string
+     * @return null|string
      */
     public function getCustomLabel4()
     {
@@ -1367,7 +1374,7 @@ class Product implements ProductSerializer
      */ 
     public function getShippingWeight()
     {
-        return $this->shippingWeight;
+        return $this->shippingWeight.' '.$this->getShippingWeightUnit();
     }
 
     /**
@@ -1378,6 +1385,26 @@ class Product implements ProductSerializer
     public function setShippingWeight($shippingWeight)
     {
         $this->shippingWeight = $shippingWeight;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of shippingWeightUnit
+     */ 
+    public function getShippingWeightUnit()
+    {
+        return $this->shippingWeightUnit;
+    }
+
+    /**
+     * Set the value of shippingWeightUnit
+     *
+     * @return  self
+     */ 
+    public function setShippingWeightUnit($shippingWeightUnit)
+    {
+        $this->shippingWeightUnit = $shippingWeightUnit;
 
         return $this;
     }
@@ -1412,7 +1439,6 @@ class Product implements ProductSerializer
 
     /**
      * Set the value of shippingWidth
-     *
      * @return  self
      */ 
     public function setShippingWidth($shippingWidth)
@@ -1644,12 +1670,25 @@ class Product implements ProductSerializer
                         break;                        
                     }
                 }
-                if(is_array($elem) && $itemVar === 'productDetails') {
-                    $elems = [];
-                    foreach($elem as $pd){
-                        $elems[] = (new ProductDetail)->make($pd);
+
+                if($itemVar === 'productCategory' || $itemVar === 'productTypes') {
+                    if(is_array($elem) && isset($elem[Feed::NAME])) {
+                        $elem = $elem[Feed::NAME];
+                    } else {
+                        $elem = null;
                     }
-                    $elem = $elems;
+                }
+
+                if($itemVar === 'productDetails') {
+                    if(isset($elem[Feed::NAME]) && is_array($elem[Feed::NAME])) {
+                        $elems = [];
+                        foreach($elem[Feed::NAME] as $pd){
+                            $elems[] = (new ProductDetail)->make($pd);
+                        }
+                        $elem = $elems;
+                    } else {
+                        $elem = null;
+                    }
                 }
 
                 $item->{$setterName}($elem);  
