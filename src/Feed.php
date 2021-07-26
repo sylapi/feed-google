@@ -38,6 +38,7 @@ class Feed extends FeedAbstract
                 $nodeChannel->appendChild($nodeItem);
             }
         }
+        $doc->appendChild($nodeChannel);
 
         $this->setMainXmlElement($nodeChannel);
 
