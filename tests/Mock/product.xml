@@ -22,8 +22,8 @@
   <g:unit_pricing_measure>750 ml</g:unit_pricing_measure>
   <g:unit_pricing_base_measure>100 ml</g:unit_pricing_base_measure>
   <g:product_category>2271</g:product_category>
-  <g:google_product_category>2271</g:google_product_category>
-  <g:google_product_category>1123</g:google_product_category>
+  <g:product_type>Home &gt; Women &gt; Dresses &gt; Maxi Dresses</g:product_type>
+  <g:product_type>Home &gt; Women &gt; Dresses</g:product_type>
   <g:canonical_link>https://url.exmaple.com/products/id-1234567890/</g:canonical_link>
   <g:brand>Brand XYZ</g:brand>
   <g:gtin>9876543210</g:gtin>

@@ -72,8 +72,8 @@ class ProductTest extends PHPUnitTestCase
             ->setUnitPricingBaseMeasure('100 ml')
             ->setProductCategory('2271')
             ->setProductTypes([
-                '2271',
-                '1123'
+                'Home > Women > Dresses > Maxi Dresses',
+                'Home > Women > Dresses'
             ])
             ->setCanonicalLink('https://url.exmaple.com/products/id-1234567890/')
             ->setBrand('Brand XYZ')
@@ -130,7 +130,6 @@ class ProductTest extends PHPUnitTestCase
     {
         $content = $this->serializer->serialize($this->product, 'xml');
         $filePath = __DIR__.'/Mock/product.xml';
-
         $this->assertXmlStringEqualsXmlFile($filePath, $content);
     }
 

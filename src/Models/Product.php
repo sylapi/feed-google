@@ -130,7 +130,7 @@ class Product implements ProductSerializer
 
     /**
      * @Serializer\XmlElement(cdata=false)
-     * @Serializer\XmlList(inline = true, entry = "google_product_category", namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlList(inline = true, entry = "product_type", namespace="http://base.google.com/ns/1.0")
      */
     private $productTypes;  
 
