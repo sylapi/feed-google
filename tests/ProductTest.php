@@ -43,7 +43,9 @@ class ProductTest extends PHPUnitTestCase
         
         $shipping = new Shipping();
         $shipping->setService('DPD_PICKUP')
-            ->setPrice(12.22);
+            ->setPrice(12.22)
+            ->setCurrency('PLN')
+            ;
     
 
         $product = new Product();

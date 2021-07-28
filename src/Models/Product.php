@@ -576,7 +576,10 @@ class Product implements ProductSerializer
      */ 
     public function getCostOfGoodsSold()
     {
-        return $this->costOfGoodsSold.' '.$this->getCurrency();
+        if($this->costOfGoodsSold && $this->getCurrency()) {
+            return $this->costOfGoodsSold.' '.$this->getCurrency();
+        }
+        return null;
     }
 
     /**
@@ -616,7 +619,10 @@ class Product implements ProductSerializer
      */ 
     public function getPrice()
     {
-        return $this->price.' '.$this->getCurrency();
+        if($this->price && $this->getCurrency()) {
+            return $this->price.' '.$this->getCurrency();
+        }
+        return null;
     }
 
     /**
@@ -636,7 +642,10 @@ class Product implements ProductSerializer
      */ 
     public function getSalePrice()
     {
-        return $this->salePrice.' '.$this->getCurrency();
+        if($this->salePrice && $this->getCurrency()) {
+            return $this->salePrice.' '.$this->getCurrency();
+        }
+        return null;
     }
 
     /**

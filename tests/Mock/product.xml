@@ -44,7 +44,7 @@
   <g:included_destination>Free local listings</g:included_destination>
   <g:shipping xmlns:g="http://base.google.com/ns/1.0">
     <g:service>DPD_PICKUP</g:service>
-    <g:price>12.22 </g:price>
+    <g:price>12.22 PLN</g:price>
   </g:shipping>
   <g:shipping_weight>3.5 kg</g:shipping_weight>
   <g:min_handling_time>3</g:min_handling_time>
