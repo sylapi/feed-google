@@ -1383,7 +1383,10 @@ class Product implements ProductSerializer
      */ 
     public function getShippingWeight()
     {
-        return $this->shippingWeight.' '.$this->getShippingWeightUnit();
+        if($this->shippingWeight && $this->getShippingWeightUnit()) {
+            return $this->shippingWeight.' '.$this->getShippingWeightUnit();
+        }
+        return null;
     }
 
     /**
