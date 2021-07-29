@@ -125,6 +125,7 @@ class Product implements ProductSerializer
     /**
      * @Serializer\Type("string")
      * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\SerializedName("google_product_category")
      */
     private $productCategory; 
 
