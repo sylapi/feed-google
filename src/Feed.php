@@ -26,7 +26,6 @@ class Feed extends FeedAbstract
         $doc->appendChild($nodeRss);
         $doc->createAttributeNS('http://base.google.com/ns/1.0', 'g:attr');
         $nodeChannel = $doc->createElement('channel');
-
         $attributes = ['title', 'description', 'link'];
 
         foreach ($attributes as $attr) {
@@ -38,7 +37,10 @@ class Feed extends FeedAbstract
                 $nodeChannel->appendChild($nodeItem);
             }
         }
-        $doc->appendChild($nodeChannel);
+        
+        
+        $nodeRss->appendChild($nodeChannel);
+        
 
         $this->setMainXmlElement($nodeChannel);
 
