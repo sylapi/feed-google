@@ -191,8 +191,8 @@ class Product implements ProductSerializer
     private $bundle;
 
     /**
-     * @Serializer\Type("boolean")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\Type("string")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $ageGroup;
 
