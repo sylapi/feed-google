@@ -30,10 +30,9 @@ class Feed extends FeedAbstract
 
         foreach ($attributes as $attr) {
             if($this->getParameters()->hasProperty($attr)) {
-                $nodeItem = $doc->createElement(
-                    $attr, 
-                    $this->getParameters()->{$attr}
-                );
+                $cdata = $doc->createCDATASection($this->getParameters()->{$attr});
+                $nodeItem = $doc->createElement($attr);
+                $nodeItem->appendChild($cdata);
                 $nodeChannel->appendChild($nodeItem);
             }
         }
