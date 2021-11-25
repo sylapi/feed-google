@@ -33,7 +33,7 @@
   <g:adult>true</g:adult>
   <g:multipack>6</g:multipack>
   <g:is_bundle>false</g:is_bundle>
-  <g:age_group>true</g:age_group>
+  <g:age_group>toddler</g:age_group>
   <g:color>black</g:color>
   <g:size_type>petite</g:size_type>
   <g:size_type>maternity</g:size_type>
