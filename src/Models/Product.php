@@ -21,31 +21,31 @@ class Product implements ProductSerializer
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $title;
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $description;
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\XmlElement(cdata=true)
      */
     private $link;
 
     /**
      * @Serializer\Type("string") 
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $imageLink;
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $mobileLink;
 
@@ -57,7 +57,7 @@ class Product implements ProductSerializer
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $availability;
 
@@ -130,7 +130,7 @@ class Product implements ProductSerializer
     private $productCategory; 
 
     /**
-     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\XmlElement(cdata=true)
      * @Serializer\XmlList(inline = true, entry = "product_type", namespace="http://base.google.com/ns/1.0")
      */
     private $productTypes;  
@@ -143,13 +143,13 @@ class Product implements ProductSerializer
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $brand;
 
     /**
      * @Serializer\Type("string")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      */
     private $gtin;  
 
@@ -1206,7 +1206,7 @@ class Product implements ProductSerializer
     /**
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_0")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      * @return null|string
      */
     public function getCustomLabel0()
@@ -1221,7 +1221,7 @@ class Product implements ProductSerializer
     /**
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_1")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      * @return null|string
      */
     public function getCustomLabel1()
@@ -1236,7 +1236,7 @@ class Product implements ProductSerializer
     /**
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_2")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      * @return null|string
      */
     public function getCustomLabel2()
@@ -1251,7 +1251,7 @@ class Product implements ProductSerializer
     /**
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_3")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      * @return null|string
      */
     public function getCustomLabel3()
@@ -1266,7 +1266,7 @@ class Product implements ProductSerializer
     /**
      * @Serializer\VirtualProperty
      * @Serializer\SerializedName("custom_label_4")
-     * @Serializer\XmlElement(cdata=false, namespace="http://base.google.com/ns/1.0")
+     * @Serializer\XmlElement(cdata=true, namespace="http://base.google.com/ns/1.0")
      * @return null|string
      */
     public function getCustomLabel4()

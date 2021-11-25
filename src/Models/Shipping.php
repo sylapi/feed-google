@@ -149,7 +149,7 @@ class Shipping
      */ 
     public function getPrice()
     {
-        if($this->price && $this->getCurrency()) {
+        if(is_numeric($this->price) && $this->getCurrency()) {
             return $this->price.' '.$this->getCurrency();
         }
         return null;
