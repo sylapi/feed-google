@@ -50,7 +50,7 @@ class Product implements ProductSerializer
     private $mobileLink;
 
     /**
-     * @Serializer\XmlElement(cdata=false)
+     * @Serializer\XmlElement(cdata=true)
      * @Serializer\XmlList(inline = true, entry = "additional_image_link", namespace="http://base.google.com/ns/1.0")
      */
     private $additionalImageLinks;
