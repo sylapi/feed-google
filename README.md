@@ -1,5 +1,10 @@
 # Google Merchant
 
+
+```
+composer required sylapi/feed-google
+```
+
 ```php
 $feedGenerator = new Sylapi\Feeds\FeedGenerator();
 $feedGenerator->setFeed(new Sylapi\Feeds\Google\Feed(
