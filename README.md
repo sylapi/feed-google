@@ -1,9 +1,22 @@
 # Google Merchant
 
+[![PHPStan](https://img.shields.io/badge/PHPStan-passing-brightgreen?logo=php)](https://phpstan.org/)
+[![PHP Version](https://img.shields.io/badge/PHP-%3E%3D8.0-blue?logo=php)](https://www.php.net/supported-versions.php)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
+Library for generating product feeds for Google Merchant Center.
+
+## Installation
+
+```bash
+composer require sylapi/feed-google
 ```
-composer required sylapi/feed-google
-```
+
+## Requirements
+- PHP >= 8.0
+- sylapi/feeds ^1.0.0
+
+## Quick Start
 
 ```php
 $feedGenerator = new Sylapi\Feeds\FeedGenerator();
@@ -16,21 +29,35 @@ $feedGenerator->setFeed(new Sylapi\Feeds\Google\Feed(
 ));
 
 $product = new \Sylapi\Feeds\Models\Product();
-//...
-$feedGenerator->appendProduct($product);
-$feedGenerator->appendProduct($product);
-//...
+// Add product data
 $feedGenerator->appendProduct($product);
 //...
 $feedGenerator->save();
 echo $feedGenerator->filePath();
 ```
 
+## Testing & Analysis
+
+Run tests:
+```bash
+composer tests
+```
+
+Static analysis:
+```bash
+composer phpstan
+```
+
+Code coverage:
+```bash
+composer coverage-html
+```
+
 ## Commands
 
 | COMMAND | DESCRIPTION |
 | ------ | ------ |
-| composer tests | Testy |
-| composer phpstan |  PHPStan |
+| composer tests | Tests |
+| composer phpstan | PHPStan |
 | composer coverage | PHPUnit Coverage |
 | composer coverage-html | PHPUnit Coverage HTML (DIR: ./coverage/) |
